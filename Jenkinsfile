@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh 'docker login'
                 sh 'docker build -t wvzuilen/pharo .'
                 sh 'docker push wvzuilen/pharo'
             }
