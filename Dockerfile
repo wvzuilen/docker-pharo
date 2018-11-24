@@ -1,5 +1,8 @@
 FROM ubuntu:trusty
 
+LABEL maintainer="wvzuilen@gmail.com"
+LABEL description="Docker image with Pharo 6 installed"
+
 RUN dpkg --add-architecture i386
 RUN apt update
 RUN apt install curl --yes
