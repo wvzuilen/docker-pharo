@@ -1,2 +1,3 @@
 # docker-pharo
-Docker image with Pharo 6
+
+Docker image based on Ubunto 14.4 LTS with Pharo 6 installed
