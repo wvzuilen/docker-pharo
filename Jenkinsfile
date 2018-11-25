@@ -5,8 +5,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'docker login'
-                sh 'docker build -t wvzuilen/pharo .'
-                sh 'docker push wvzuilen/pharo'
+                sh 'docker build -t wvzuilen/pharo:latest .'
             }
         }
         // stage('Test') {
@@ -14,10 +13,11 @@ pipeline {
         //         echo 'Testing..'
         //     }
         // }
-        // stage('Deploy') {
-        //     steps {
-        //         echo 'Deploying....'
-        //     }
-        // }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+                sh 'docker push wvzuilen/pharo'
+            }
+        }
     }
 }

@@ -16,4 +16,4 @@ RUN apt install libssl1.0.0:i386 --yes
 WORKDIR /pharo
 RUN curl get.pharo.org | bash
 RUN echo 'kernel.sched_rt_runtime_us=-1' > /etc/sysctl.conf
-RUN "./pharo Pharo.image eval 'HDTestReport runClasses: (OrderedCollection with: StringTest) named: 'StringTest''"
+# RUN "./pharo Pharo.image eval 'HDTestReport runClasses: (OrderedCollection with: StringTest) named: 'StringTest''"
