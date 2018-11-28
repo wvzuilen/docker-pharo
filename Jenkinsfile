@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Pushing to Docker Hub...'
                 sh 'docker push wvzuilen/pharo:latest'
             }
         }
